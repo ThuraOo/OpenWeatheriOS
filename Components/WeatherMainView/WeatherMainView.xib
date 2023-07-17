@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherMainView" customModule="Weather_App" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="egx-MT-gSN" id="bOY-PI-87f"/>
+                <outlet property="imgWeather" destination="Mcp-mj-B2M" id="Wjv-Hc-F3p"/>
+                <outlet property="lblCityName" destination="aCt-93-jNV" id="KNV-me-ZVj"/>
+                <outlet property="lblTemp" destination="fWN-MK-fom" id="4Zs-2c-zws"/>
+                <outlet property="lblWeatherDesc" destination="GMb-NF-Vuf" id="EvO-ua-hR9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egx-MT-gSN" userLabel="bgHighlightView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 'C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWN-MK-fom">
+                    <rect key="frame" x="163.66666666666663" y="33" width="135.33333333333337" height="24"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aCt-93-jNV">
+                    <rect key="frame" x="20.000000000000007" y="20" width="123.66666666666669" height="23.666666666666671"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" text="weather description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GMb-NF-Vuf">
+                    <rect key="frame" x="20.000000000000007" y="53.666666666666664" width="123.66666666666669" height="16.333333333333336"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mcp-mj-B2M">
+                    <rect key="frame" x="309" y="13" width="64" height="64"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="D1N-8H-WRi"/>
+                        <constraint firstAttribute="height" constant="64" id="Tvk-FI-Hby"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+            <constraints>
+                <constraint firstItem="fWN-MK-fom" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GMb-NF-Vuf" secondAttribute="trailing" constant="20" id="0US-jd-FTE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="GMb-NF-Vuf" secondAttribute="bottom" constant="20" id="0a6-Db-CQ7"/>
+                <constraint firstItem="GMb-NF-Vuf" firstAttribute="top" secondItem="aCt-93-jNV" secondAttribute="bottom" constant="10" id="1Dm-GN-GJt"/>
+                <constraint firstItem="egx-MT-gSN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="87w-CN-gJU"/>
+                <constraint firstItem="fWN-MK-fom" firstAttribute="leading" secondItem="aCt-93-jNV" secondAttribute="trailing" constant="20" id="ACN-sC-Ksr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Mcp-mj-B2M" secondAttribute="trailing" constant="20" id="Fqv-iN-K7c"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="egx-MT-gSN" secondAttribute="trailing" id="Ir1-Zz-qyW"/>
+                <constraint firstItem="fWN-MK-fom" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Jz8-Up-R1m"/>
+                <constraint firstItem="egx-MT-gSN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RQO-qu-FuE"/>
+                <constraint firstItem="aCt-93-jNV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="aoc-dl-Br4"/>
+                <constraint firstItem="Mcp-mj-B2M" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bgm-D7-hcU"/>
+                <constraint firstItem="aCt-93-jNV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="is8-om-IDl"/>
+                <constraint firstItem="Mcp-mj-B2M" firstAttribute="leading" secondItem="fWN-MK-fom" secondAttribute="trailing" constant="10" id="pjO-kj-HsI"/>
+                <constraint firstItem="GMb-NF-Vuf" firstAttribute="leading" secondItem="aCt-93-jNV" secondAttribute="leading" id="ucD-vV-f5B"/>
+                <constraint firstAttribute="bottom" secondItem="egx-MT-gSN" secondAttribute="bottom" id="xdz-K9-H1V"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="30"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="130.53435114503816" y="-282.3943661971831"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
